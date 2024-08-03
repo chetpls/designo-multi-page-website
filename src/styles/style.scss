@@ -1,0 +1,21 @@
+@import "./_navbar";
+@import "./_footer";
+@import "./_home";
+@import "./_projectcard";
+@import "@fontsource/jost"; // Defaults to weight 400
+@import "@fontsource/jost/400.css"; // Specify weight
+@import "@fontsource/jost/400-italic.css"; // Specify weight and style
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Jost', sans-serif;
+}
+
+main{
+    min-height:100vh;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
