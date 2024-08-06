@@ -1,0 +1,62 @@
+.aboutMain{
+    text-align: center;
+}
+
+
+
+
+#aboutUsSection{
+    display: flex;
+    flex-direction: column;
+    background-color:#e88069;
+    .content{
+        color:#fff;
+    }
+}
+
+#talentSection{
+    display: flex;
+    flex-direction: column;
+    background-color:#fdf4f2;
+    .content{
+        color:#000;
+        h1{
+            color:#e88069;
+        }
+    }
+}
+
+#realDealSection{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdf4f2;
+    .content{
+        color:#000;
+        h1{
+            color:#e88069;
+        }
+    }
+}
+
+
+
+.aboutUsImage{
+    img{
+        width: 100%;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/about/desktop/bg-pattern-hero-about-desktop.svg");
+    padding:5rem 2rem;
+    h1{
+        font-size: 2rem;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+}

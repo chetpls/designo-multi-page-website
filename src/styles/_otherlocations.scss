@@ -1,0 +1,37 @@
+.otherLocationsList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:2rem;
+    padding:2rem 1rem;
+}
+
+
+.locationCards{
+    display: flex;
+    flex-direction: column;
+    .locationIllustration{
+        .illustration {
+            background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    .locationContent{
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        h3{
+            letter-spacing:.5rem;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .otherLocationsList{
+        display: flex;
+        flex-direction: row;
+    }
+}

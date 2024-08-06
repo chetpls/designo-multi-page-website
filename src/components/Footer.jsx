@@ -18,7 +18,7 @@ function Footer() {
 				</div>
 				<div className="navLinks">
 					<NavLink className="navLink" to="/about">
-						OUR COMANY
+						OUR COMPANY
 					</NavLink>
 					<NavLink className="navLink" to="/locations">
 						LOCATIONS

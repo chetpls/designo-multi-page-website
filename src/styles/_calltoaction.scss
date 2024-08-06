@@ -1,0 +1,26 @@
+#callToActionSection{
+    padding:2rem;
+    background: linear-gradient(to bottom, #fff 0% ,#fff 50%,#1c1b1d 50%, #1c1b1d 100%);
+    .callToActionContainer{
+        border-radius: 1rem;
+        color:#fff;
+        gap:1rem;
+
+        display: flex;
+        flex-direction: column;
+        padding:5rem 3rem;
+        text-align: center;
+        background-color: #e88069;
+        background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
+        h1{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+@media (min-width: 768px){
+    #callToActionSection{
+        padding:5rem;
+    }
+}

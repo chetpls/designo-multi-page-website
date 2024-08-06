@@ -1,5 +1,7 @@
 header{
     width: 100%;
+    position: relative;
+    z-index: 10;
     nav{
         display:flex;
         justify-content: space-between;
@@ -36,23 +38,25 @@ header{
                 justify-content: center;
                 align-items: center;
                 gap:1rem;
-                top:60px;
+                top:6rem;
                 left:0;
                 right:0;
-                background: #fff;
+                background-color: #1c1b1d;
                 padding:1rem;
                 text-decoration: none;
                 .navLink{
                     text-decoration: none;
+                    color:#fff;
                 }
                 &.active{
-                    display:flex
+                    display:flex;
                 }
             }
             button{
                 display: block;
                 background:none;
                 border:none;
+                z-index: 11;
             }
         }
     }

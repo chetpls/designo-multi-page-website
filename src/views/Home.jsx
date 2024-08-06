@@ -1,30 +1,26 @@
 import HeroImage from "../assets/home/desktop/image-hero-phone.png"
-import { useNavigate } from "react-router-dom";
-import ServiceCard from "../components/ProjectCard";
+import OtherServiceCard from "../components/OtherServiceCard";
 import servicesData from "../data/services.json"
 import IllustrationFriendly from "../assets/home/desktop/illustration-friendly.svg"
 import IllustrationPassionate from "../assets/home/desktop/illustration-passionate.svg"
 import IllustrationResourceful from "../assets/home/desktop/illustration-resourceful.svg"
-
-
+import CallToAction from "../components/CallToAction";
+import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-
     const navigate = useNavigate();
 
-    const handleViewProjects = (projects) =>{
-        navigate(`/services/${projects}`)
+    const handleLearnMore =() =>{
+        navigate("/about")
     }
-
     return(
         <main className="home">
             <section id="heroSection">
                 <div className="heroContainer">
                 <h2>Award-winning custom designs and digital branding solutions</h2>
                 <p>With over 10 years in the industry, we are eperienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                <button id="learnMoreBTN">
-                    LEARN MORE
-                </button>
+                <Button text="LEARN MORE" color="black" backgroundColor="white" onClick={handleLearnMore}></Button>
                 <div className="heroImage">
                     <img src={HeroImage} alt="hero image" />
                 </div>
@@ -34,7 +30,7 @@ function Home() {
                 <div className="servicesContainer">
                     <picture></picture>
                     {servicesData.map((service) => (
-                        <ServiceCard key={service.id} service={service} />
+                        <OtherServiceCard key={service.id} service={service} />
                     ))}
                 </div>
             </section>
@@ -69,13 +65,14 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section id="callToActionSection">
+            <CallToAction />
+            {/* <section id="callToActionSection">
                 <div className="callToActionContainer">
                     <h1>Let's talk about your project</h1>
                     <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
                     <button id="getInTouchBTN">GET IN TOUCH</button>
                 </div>
-            </section>
+            </section> */}
         </main>
     )
 

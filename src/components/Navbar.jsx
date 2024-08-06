@@ -20,9 +20,9 @@ function Navbar() {
 					</NavLink>
 				</div>
 				<div className={`navMenu ${isMobileMenuOpen ? "active" : ""}`}>
-					<NavLink className="navLink" to="/about">OUR COMPANY</NavLink>
-					<NavLink className="navLink" to="/locations">LOCATIONS</NavLink>
-					<NavLink className="navLink" to="/contact">CONTACT</NavLink>
+					<NavLink className="navLink" to="/about" onClick={toggleMobileMenu}>OUR COMPANY</NavLink>
+					<NavLink className="navLink" to="/locations " onClick={toggleMobileMenu}>LOCATIONS</NavLink>
+					<NavLink className="navLink" to="/contact" onClick={toggleMobileMenu}>CONTACT</NavLink>
 				</div>
 
 				<button

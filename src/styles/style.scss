@@ -1,7 +1,13 @@
 @import "./_navbar";
 @import "./_footer";
 @import "./_home";
-@import "./_projectcard";
+@import "./calltoaction";
+@import "./_about";
+@import "./_locations";
+@import "./_contact";
+@import "./button";
+@import "./_otherlocations";
+@import "./_otherservicecard";
 @import "@fontsource/jost"; // Defaults to weight 400
 @import "@fontsource/jost/400.css"; // Specify weight
 @import "@fontsource/jost/400-italic.css"; // Specify weight and style
