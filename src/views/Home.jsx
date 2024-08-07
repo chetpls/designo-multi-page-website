@@ -18,9 +18,11 @@ function Home() {
         <main className="home">
             <section id="heroSection">
                 <div className="heroContainer">
-                <h2>Award-winning custom designs and digital branding solutions</h2>
-                <p>With over 10 years in the industry, we are eperienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                <Button text="LEARN MORE" color="black" backgroundColor="white" onClick={handleLearnMore}></Button>
+                <div className="heroContent">
+                    <h2>Award-winning custom designs and digital branding solutions</h2>
+                    <p>With over 10 years in the industry, we are eperienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
+                    <Button className="learnMoreBTN" text="LEARN MORE" color="black" backgroundColor="white" onClick={handleLearnMore}></Button>
+                </div>
                 <div className="heroImage">
                     <img src={HeroImage} alt="hero image" />
                 </div>
@@ -28,15 +30,14 @@ function Home() {
             </section>
             <section id="servicesSection">
                 <div className="servicesContainer">
-                    <picture></picture>
                     {servicesData.map((service) => (
-                        <OtherServiceCard key={service.id} service={service} />
+                        <OtherServiceCard  key={service.id} service={service} />
                     ))}
                 </div>
             </section>
             <section id="benefitsSection">
                 <div className="benefitsContainer">
-                    <div className="benfitCard">
+                    <div className="benefitCard">
                         <div className="benefitIllustration">
                         <img src={IllustrationPassionate} className="illustration" alt="illustration passionate" />
                         </div>
@@ -45,7 +46,7 @@ function Home() {
                             <p>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and tehcnology into exciting new solutions.</p>
                         </div>
                     </div>
-                    <div className="benfitCard">
+                    <div className="benefitCard">
                         <div className="benefitIllustration">
                         <img src={IllustrationResourceful} className="illustration" alt="illustration resourceful" />
                         </div>
@@ -54,7 +55,7 @@ function Home() {
                             <p>Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It gurantees superior results that fulfill our clients' needs.</p>
                         </div>
                     </div>
-                    <div className="benfitCard">
+                    <div className="benefitCard">
                         <div className="benefitIllustration">
                         <img src={IllustrationFriendly} className="illustration" alt="illustration friendly" />
                         </div>
@@ -66,13 +67,6 @@ function Home() {
                 </div>
             </section>
             <CallToAction />
-            {/* <section id="callToActionSection">
-                <div className="callToActionContainer">
-                    <h1>Let's talk about your project</h1>
-                    <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
-                    <button id="getInTouchBTN">GET IN TOUCH</button>
-                </div>
-            </section> */}
         </main>
     )
 

@@ -1,62 +1,177 @@
-
-
 #heroSection {
 	.heroContainer {
+	  display: flex;
+	  flex-direction: column;
+	  text-align: center;
+	  gap: 1rem;
+	  color: #fff;
+	  background-color: #e88069;
+	  height: 40rem;
+	  overflow: hidden;
+	  background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
+	  background-repeat: no-repeat;
+	  padding: 3rem;
+	  background-position: bottom;
+  
+	  .heroContent {
 		display: flex;
 		flex-direction: column;
-		text-align: center;
 		gap: 1rem;
-		color: #fff;
-		background-color: #e88069;
-		height: 40rem;
-		overflow: hidden;
-		background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
-		background-repeat: no-repeat;
-		padding: 3rem;
-		background-position: bottom;
-
-		.heroImage {
-			margin-top: 4rem;
-		}
+		align-items: center;
+	  }
+  
+	  .heroImage {
+		margin-top: 4rem;
+	  }
 	}
-}
-
-#servicesSection {
+  }
+  
+  #servicesSection {
+	padding: 3rem;
+  
 	.servicesContainer {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 1rem;
+	}
+  }
+  
+  #benefitsSection {
+	.benefitsContainer {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 5rem;
+	  padding: 1rem;
+  
+	  .benefitCard {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		padding: 3rem;
+		align-items: center;
+  
+		.benefitIllustration {
+		  .illustration {
+			background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
+			background-position: center;
+			background-size: contain;
+		  }
+		}
+  
+		.benefitContent {
+		  display: flex;
+		  flex-direction: column;
+		  gap: 1rem;
+		  text-align: center;
+  
+		  h2 {
+			letter-spacing: 0.5rem;
+		  }
+		}
+	  }
 	}
-}
+  }
+  
+  @media (min-width: 768px) {
+	#heroSection {
+	  .heroContainer {
+		padding: 5rem;
+		border-radius: 1rem;
+		background-position: 10rem;
+  
+		h2 {
+		  font-size: 2.5rem;
+		}
+	  }
+	}
+  
+	#benefitsSection {
+	  .benefitsContainer {
+		.benefitCard {
+		  flex-direction: row;
+		  gap: 2rem;
+  
+		  .benefitContent {
+			text-align: start;
+		  }
+		}
+	  }
+	}
+  }
+  
+  @media (min-width: 1024px) {
+	#heroSection {
 
-#benefitsSection {
-	.benefitsContainer {
-		display: flex;
-		flex-direction: column;
-		gap: 5rem;
-		padding: 1rem;
-		.benfitCard {
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
+	  .heroContainer {
+		flex-direction: row;
+		background-position: right;
+  
+		.heroContent {
+		  justify-content: center;
+		  align-items: start;
+		  text-align: start;
+		}
+	  }
+	}
+  
+	#servicesSection {
+		padding: 5rem 10rem;
+	
+		.servicesContainer {
+		  display: grid;
+		  grid-template-columns: repeat(2,1fr);
+		  grid-template-rows: repeat(2,1fr);
+		  gap:1rem;
+		  height:640px;
+		  .serviceCard {
+			&:nth-of-type(1) {
+			  grid-column: 1 / 2;
+			  grid-row: 1 / span 2;
+			}
+	
+			&:nth-of-type(2) {
+			  grid-column: 2 / 3;
+			  grid-row: 1 / 2;
+			}
+	
+			&:nth-of-type(3) {
+			  grid-column: 2 / 3;
+			  grid-row: 2 / 3;
+			}
+
+		}
+	  }
+	}
+  
+	#benefitsSection {
+
+  
+	  .benefitsContainer {
+		flex-direction: row;
+  
+		.benefitCard {
+		  flex-direction: column;
+		  gap: 2rem;
+  
+		  .benefitContent {
 			align-items: center;
-			.benefitIllustration {
-				.illustration {
-					background-image: url("../assets/home/desktop/bg-pattern-hero-home.svg");
-					background-position: center;
-					background-size: contain;
-				}
-			}
-			.benefitContent {
-				display: flex;
-				flex-direction: column;
-				gap: 1rem;
-				text-align: center;
-			}
+		  }
+		}
+	  }
+	}
+  }
+  
+
+  @media (min-width: 1500px) {
+	#heroSection{
+		padding: 0 15rem;
+		.heroContainer{
+			padding: 5rem 10rem;
 		}
 	}
-}
+	#servicesSection{
+		padding: 5rem 15rem;
+	}
 
 
 
+  }

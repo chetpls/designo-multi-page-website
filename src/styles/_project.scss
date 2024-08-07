@@ -1,0 +1,45 @@
+.projectCard{
+    border-radius: 1rem;
+    background-color: #fdf4f2;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+
+        .projectContent{
+            .projectName{
+                color:#fff;
+            }
+            .projectDescription{
+                color:#fff;
+                }
+        }
+        background-color: #e88069;
+    }
+    .projectImage{
+        overflow: hidden;
+        max-height:20rem;
+        img{
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+            object-position: top;
+        }
+    }
+
+    .projectContent{
+        text-align: center;
+        padding:2.5rem;
+
+        .projectName{
+            letter-spacing: .5rem;
+            color:#e88069;
+        }
+        .projectDescription{
+            color:#000;
+        }
+    }
+}
+
+.projectCard{
+    background-color: #fdf4f2;
+}

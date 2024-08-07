@@ -13,10 +13,10 @@ function OtherServiceCard({ service }) {
 	return (
 		<div
 			className="serviceCard"
-            style={{ backgroundImage: `url(./assets/home/mobile/${service.image})` }}
+			style={{ backgroundImage: `url(/assets/home/desktop/${service.image})` }}
 			onClick={() => handleViewProjects(service.slug)}
 		>
-			<div className="projectCardContent">
+			<div className="serviceCardContent">
 				<h2>{service.name}</h2>
 				<p>
 					View Projects <img src={RightArrow} alt="right arrow" />

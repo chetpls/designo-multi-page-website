@@ -5,7 +5,9 @@
 @import "./_about";
 @import "./_locations";
 @import "./_contact";
-@import "./button";
+@import "./_button";
+@import "./_service";
+@import "./_project";
 @import "./_otherlocations";
 @import "./_otherservicecard";
 @import "@fontsource/jost"; // Defaults to weight 400
@@ -24,4 +26,16 @@ main{
 body{
     display: flex;
     flex-direction: column;
+}
+
+
+@media (min-width:1024px){
+    section{
+        padding: 0 10rem;
+    }
+}
+@media (min-width:1500px){
+    section{
+        padding: 5rem 15rem;
+    }
 }

@@ -1,10 +1,39 @@
-.serviceCard{
-    padding:5rem 1rem;
+.serviceCard {
+    padding: 5rem 1rem;
     text-align: center;
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
     background-position: center;
     background-size: cover;
     border-radius: 1rem;
     cursor: pointer;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; // Ensure a minimum height for smaller screens
+  
+    @media (min-width: 1024px) {
+      height: 100%; // Fill the entire grid cell
+      padding: 0; // Remove padding to allow full coverage
+    }
+  
+    .serviceCardContent {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+    }
+  
+    &:hover {
+      // Add hover effect if desired
+      opacity: .8;
+    }
+  }

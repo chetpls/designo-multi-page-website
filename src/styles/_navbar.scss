@@ -6,7 +6,7 @@ header{
         display:flex;
         justify-content: space-between;
         align-items: center;
-        padding:5rem;
+        padding:5rem 15rem;
         .navLogo{
             img{
                 height: 25px;
@@ -38,7 +38,7 @@ header{
                 justify-content: center;
                 align-items: center;
                 gap:1rem;
-                top:6rem;
+                top:8rem;
                 left:0;
                 right:0;
                 background-color: #1c1b1d;
@@ -58,6 +58,14 @@ header{
                 border:none;
                 z-index: 11;
             }
+        }
+    }
+}
+
+@media( max-width: 1024px){
+    .header{
+        nav{
+            padding:5rem 2rem;
         }
     }
 }
