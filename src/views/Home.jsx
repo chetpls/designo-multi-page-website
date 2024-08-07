@@ -7,13 +7,10 @@ import IllustrationResourceful from "../assets/home/desktop/illustration-resourc
 import CallToAction from "../components/CallToAction";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
-    const navigate = useNavigate();
 
-    const handleLearnMore =() =>{
-        navigate("/about")
-    }
     return(
         <main className="home">
             <section id="heroSection">
@@ -21,7 +18,7 @@ function Home() {
                 <div className="heroContent">
                     <h2>Award-winning custom designs and digital branding solutions</h2>
                     <p>With over 10 years in the industry, we are eperienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
-                    <Button className="learnMoreBTN" text="LEARN MORE" color="black" backgroundColor="white" onClick={handleLearnMore}></Button>
+                    <Link to="/about"><Button className="learnMoreBTN" text="LEARN MORE" color="black" backgroundColor="white" ></Button></Link>
                 </div>
                 <div className="heroImage">
                     <img src={HeroImage} alt="hero image" />

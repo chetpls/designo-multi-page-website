@@ -1,45 +1,78 @@
-.projectCard{
-    border-radius: 1rem;
-    background-color: #fdf4f2;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-    &:hover{
+.projectCard {
+	border-radius: 1rem;
+	background-color: #fdf4f2;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	&:hover {
+		.projectContent {
+			.projectName {
+				color: #fff;
+			}
+			.projectDescription {
+				color: #fff;
+			}
+		}
+		background-color: #e88069;
+	}
+	.projectImage {
+		overflow: hidden;
+		max-height: 20rem;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: top;
+			border-top-right-radius: 1rem;
+			border-top-left-radius: 1rem;
+		}
+	}
 
-        .projectContent{
-            .projectName{
-                color:#fff;
-            }
-            .projectDescription{
-                color:#fff;
-                }
-        }
-        background-color: #e88069;
-    }
-    .projectImage{
-        overflow: hidden;
-        max-height:20rem;
-        img{
-            width: 100%;
-            height:100%;
-            object-fit:cover;
-            object-position: top;
-        }
-    }
+	.projectContent {
+		text-align: center;
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
 
-    .projectContent{
-        text-align: center;
-        padding:2.5rem;
-
-        .projectName{
-            letter-spacing: .5rem;
-            color:#e88069;
-        }
-        .projectDescription{
-            color:#000;
-        }
-    }
+		.projectName {
+			letter-spacing: 0.5rem;
+			color: #e88069;
+		}
+		.projectDescription {
+			color: #000;
+		}
+	}
 }
 
-.projectCard{
-    background-color: #fdf4f2;
+@media (min-width: 768px) {
+	.projectCard {
+		flex-direction: row;
+		.projectImage {
+			max-width: 20rem;
+			img {
+				border-bottom-left-radius: 1rem;
+				border-top-right-radius: 0;
+			}
+		}
+		.projectContent {
+			justify-content: center;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.projectCard {
+		flex-direction: column;
+		.projectImage {
+			max-width: 100%;
+			img {
+				border-top-right-radius: 1rem;
+				border-bottom-left-radius: 0;
+			}
+		}
+		.projectContent {
+		}
+		justify-content: center;
+	}
 }

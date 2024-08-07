@@ -11,7 +11,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 250px; // Ensure a minimum height for smaller screens
+    min-height: 250px;
+    text-decoration: none; // Ensure a minimum height for smaller screens
   
     @media (min-width: 1024px) {
       height: 100%; // Fill the entire grid cell

@@ -1,19 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import RightArrow from "../assets/shared/desktop/icon-right-arrow.svg";
 
 
 function OtherServiceCard({ service }) {
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 
-	const handleViewProjects = (slug) => {
-		navigate(`/services/${slug}`);
-	};
+	// const handleViewProjects = (slug) => {
+	// 	navigate(`/services/${slug}`);
+	// };
 
 	return (
-		<div
+		<Link to={`/services/${service.slug}`}
 			className="serviceCard"
-			style={{ backgroundImage: `url(/assets/home/desktop/${service.image})` }}
+			style={{ backgroundImage: `url(/assets/home/desktop/${service.image})`, textTransform:"none" }}
 			onClick={() => handleViewProjects(service.slug)}
 		>
 			<div className="serviceCardContent">
@@ -22,7 +22,7 @@ function OtherServiceCard({ service }) {
 					View Projects <img src={RightArrow} alt="right arrow" />
 				</p>
 			</div>
-		</div>
+		</Link>
 	);
 }
 
