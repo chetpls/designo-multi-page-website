@@ -61,51 +61,69 @@ function Contact() {
 	};
 	return (
 		<main className="contactMain">
-			<section className="contactFormSection">
-				<div className="contactForm">
-					<h1>Contact Us</h1>
-					<p>
-						Ready to take it to the next level? Let's talk about
-						your project or idea and find out how we can help your
-						business grow. If you are looking for unique digital
-						experience that's relatable to your users, drop us a
-						line.
-					</p>
-					<form onSubmit={handleSubmit}>
-						<div className="formGroup">
-							<label htmlFor="contactName">
-								Name: <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-							</label>
-                            {errors.name && <span className="error">{errors.name}</span>}
-						</div>
-						<div className="formGroup">
-							<label htmlFor="contactEmail">
-								Email:{" "}
-								<input type="email" name="email" value={formData.email} onChange={handleChange} required />
-							</label>
-                            {errors.email && <span className="error">{errors.email}</span>}
-						</div>
-						<div className="formGroup">
-							<label htmlFor="contactPhone">
-								Phone:{" "}
-								<input type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
-							</label>
-                            {errors.phone && <span className="error">{errors.phone}</span>}
-						</div>
-						<div className="formGroup">
-							<label htmlFor="contactMessage">
-								Message:{" "}
-								<textarea type="text" name="message" value={formData.message} onChange={handleChange} required />
-							</label>
-                            {errors.message && <span className="error">{errors.message}</span>}
-						</div>
-						<Button
-							text="SUBMIT"
-							type="submit"
-							color="white"
-							backgroundColor="#e88069"
-						></Button>
-					</form>
+			<section id="contactFormSection">
+				<div className="contactFormContainer">
+					<div className="contactHeader">
+						<h1 className="contactTitle">Contact Us</h1>
+						<p className="contactDescription">
+							Ready to take it to the next level? Let's talk about
+							your project or idea and find out how we can help your
+							business grow. If you are looking for unique digital
+							experience that's relatable to your users, drop us a
+							line.
+						</p>
+					</div>
+					<form className="contactForm" onSubmit={handleSubmit}>
+            <div className="formGroup">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                
+              />
+              {errors.name && <span className="error">{errors.name}</span>}
+            </div>
+            <div className="formGroup">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                
+              />
+              {errors.email && <span className="error">{errors.email}</span>}
+            </div>
+            <div className="formGroup">
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone"
+                
+              />
+              {errors.phone && <span className="error">{errors.phone}</span>}
+            </div>
+            <div className="formGroup">
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message"
+                
+              />
+              {errors.message && <span className="error">{errors.message}</span>}
+            </div>
+            <Button id="submitBTN"
+              text="SUBMIT"
+              type="submit"
+              color="black"
+              backgroundColor="white"
+            />
+          </form>
 				</div>
 			</section>
 			<section className="otherLocationsSection">
