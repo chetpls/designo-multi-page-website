@@ -27,6 +27,10 @@
 			display: flex;
 			flex-direction: column;
 			gap: 1.5rem;
+			button {
+				align-self: center;
+
+			}
 			.formGroup {
 				display: flex;
 				flex-direction: column;
@@ -62,6 +66,7 @@
 					font-size: 0.8rem;
 					margin-top: 0.25rem;
 				}
+
 			}
 		}
 
